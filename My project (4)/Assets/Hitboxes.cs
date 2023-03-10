@@ -18,8 +18,9 @@ public class Hitboxes : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G))
         { 
+
             LaunchAttack(hitbox[0]);
-            Debug.Log("G pressed");
+            
         }
     }
 
@@ -27,7 +28,10 @@ public class Hitboxes : MonoBehaviour
     {
         Collider[] cols = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("Hitbox"));
         foreach (Collider c in cols)
+        {
             Debug.Log(c.name);
+            
 
+        }
     }
 }
